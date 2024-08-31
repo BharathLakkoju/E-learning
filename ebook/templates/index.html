@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'miniprojects.css' %}" rel="stylesheet">
+    <title>Materials</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'title_head.png' %}" alt="logo">
+    </div>
+    <div>
+        <h1 class="dept-title">DEPARTMENT OF INFORMATION TECHNOLOGY</h1>
+    </div>
+    <div class="div1">
+        <div class="left admin">
+            <div class="head">
+                <h2>ADMIN LOGIN</h2>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+            <div class="uname">
+                <label for="aname" id="t1"><h3>Admin ID:</h3></label><br>
+                <input type="text" name="aname" id="in1">
+            </div>
+            <div class="pwd">
+                <label for="apwd" id="apwd"><h3>Password:</h3></label><br>
+                <input type="password" name="apwd" id="in2">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Login" id="btn" name="admin">
+            </div>
+        </form>
+        </div>
+        <div class="right stud">
+            <div class="head">
+                <h2>USER LOGIN</h2>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+            <div class="uname">
+                <label for="uname" id="t1"><h3>User ID:</h3></label><br>
+                <input type="text" name="uname" id="in1">
+            </div>
+            <div class="pwd">
+                <label for="pwd" id="pwd"><h3>Password:</h3></label><br>
+                <input type="password" name="upwd" id="in2">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Login" id="btn" name="user">
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

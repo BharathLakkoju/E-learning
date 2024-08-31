@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester</title>
+    <style>
+		body{
+			background-image: linear-gradient(90deg, rgba(25,25,25,0.8),rgba(25,25,25,0.2),rgba(25,25,25,0.8)),url('/static/sem.png');
+		}
+		h1{
+			text-align: right;
+			font-size:55px;
+			margin-right: 2% ;
+			margin-top: 10%;
+			color: whitesmoke;
+		}
+		.div1{
+			display:flex;
+		}
+		div{
+			justify-content: right;
+			align-items: right;
+			margin-right: 6%;
+		}
+		.sem{
+			font-size: 30px;
+			color: whitesmoke;
+			text-decoration: none;
+		}
+    </style>
+</head>
+<body>
+	<h1>Choose a Semester</h1><br>
+  <div class="div1">
+	<div>
+	<a href="{% url 'index4' %}" class="sem">&crarr; Semester-1</a><br><br>
+	<a href="{% url 'index6' %}" class="sem">&crarr; Semester-2</a><br><br>
+	<a href="{% url 'index8' %}" class="sem">&crarr; Semester-3</a><br><br>
+	<a href="{% url 'index10' %}" class="sem">&crarr; Semester-4</a><br><br>
+	<a href="{% url 'index12' %}" class="sem">&crarr; Semester-5</a><br><br>
+	<a href="{% url 'index14' %}" class="sem">&crarr; Semester-6</a><br><br>
+	<a href="{% url 'index16' %}" class="sem">&crarr; Semester-7</a>
+	</div>
+  </div>
+</body>
+</html>
